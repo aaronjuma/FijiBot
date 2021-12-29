@@ -31,4 +31,7 @@ async def help(ctx):
     em.add_field(name = "~fiji", value = "Displays a Fiji quote", inline=False)
     await ctx.send(embed = em)
 
-client.run('ODgyNTA3ODE0NTQxNjA2OTIz.YS8Zcw.AHznuk2FfMbSsUEQBJAjk3CbUvI')
+
+
+#DONT FORGET TO REMOVE TOKEN >:(
+client.run('token')
