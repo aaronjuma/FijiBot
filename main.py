@@ -22,7 +22,7 @@ async def on_message(message):
 
     if message.content.startswith('~danny'):
         num = str(random.randrange(5))
-        await message.reply(file=discord.File('fiji' + num + '.png'))
+        await message.reply(file=discord.File('img/fiji' + num + '.png'))
 
 @client.group(invoke_without_command=True)
 async def help(ctx):
@@ -31,4 +31,4 @@ async def help(ctx):
     em.add_field(name = "~fiji", value = "Displays a Fiji quote", inline=False)
     await ctx.send(embed = em)
 
-client.run('token')
+client.run('ODgyNTA3ODE0NTQxNjA2OTIz.YS8Zcw.AHznuk2FfMbSsUEQBJAjk3CbUvI')
