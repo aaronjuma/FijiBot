@@ -34,4 +34,4 @@ async def help(ctx):
 
 
 #DONT FORGET TO REMOVE TOKEN BEFORE PUSHING >:(
-client.run('ODgyNTA3ODE0NTQxNjA2OTIz.YS8Zcw.lkWLsC_oEL30L9XHD9gToWPMfAo')
+client.run('token')
