@@ -2,22 +2,16 @@ import discord
 from discord.ext import commands
 import random
 import pathlib
+import os
 
 client = commands.Bot(command_prefix = "~")
 client.remove_command('help')
 
 fijiquotes = ["JOHN MERTON FROM OAK LAWN ILLINOIS", "CHISA IS BEST GIRL", "@Raycheck#8150 IS MY DAD", "I SUCK OFF MICHAEL", "You're fat!", "I HAVE AUTISM"]
-numOfIMGS = 0
 
 @client.event
 async def on_ready():
     print("Fiji Bot active")
-    num = 0
-    for path in pathlib.Path("img").iterdir():
-        if path.is_file():
-            num += 1
-    global numOfIMGS
-    numOfIMGS = num
 
 @client.event
 async def on_message(message):
@@ -28,9 +22,7 @@ async def on_message(message):
         await message.reply(fijiquotes[random.randrange(len(fijiquotes))], mention_author=True)
 
     if message.content.startswith('~danny'):
-        global numOfIMGS
-        num = str(random.randrange(numOfIMGS-1))
-        await message.reply(file=discord.File('img/fiji' + num + '.png'))
+        await message.reply(file=discord.File("img/" + random.choice(os.listdir("img/"))))
 
 @client.group(invoke_without_command=True)
 async def help(ctx):
@@ -42,4 +34,4 @@ async def help(ctx):
 
 
 #DONT FORGET TO REMOVE TOKEN BEFORE PUSHING >:(
-client.run('token')
+client.run('ODgyNTA3ODE0NTQxNjA2OTIz.YS8Zcw.lkWLsC_oEL30L9XHD9gToWPMfAo')
