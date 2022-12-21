@@ -11,4 +11,5 @@ async def on_ready():
 async def on_message(message):
     await ds.onMessage(message)
 
-client.run('ODgyNTA3ODE0NTQxNjA2OTIz.GWasbg.MSEBd7Siin92icqCcD4ZnjjIS4aG2hbjpZuSC0')
+token = ds.getToken()
+client.run('token')

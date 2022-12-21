@@ -33,3 +33,10 @@ async def onMessage(message):
 
 def getClient():
     return client
+
+
+def getToken():
+    f = open('token.txt', 'r')
+    token = f.readline()
+    f.close()
+    return token
