@@ -17,4 +17,3 @@ def getQuote():
 
 def setup():
     setupQuotes()
-    print(quotes)

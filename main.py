@@ -12,4 +12,4 @@ async def on_message(message):
     await ds.onMessage(message)
 
 token = ds.getToken()
-client.run('token')
+client.run(token)
